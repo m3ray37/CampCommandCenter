@@ -1,0 +1,153 @@
+/* ============================================
+   CUSTOM SCROLLBAR STYLING
+   ============================================ */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* ============================================
+   CHART CONTAINER SIZING
+   ============================================ */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 280px;
+    max-height: 350px;
+}
+
+@media (min-width: 768px) {
+    .chart-container {
+        height: 320px;
+    }
+}
+
+/* ============================================
+   TAB CONTENT VISIBILITY
+   ============================================ */
+.tab-content {
+    animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ============================================
+   PRINT STYLES FOR GROCERY LIST
+   ============================================ */
+@media print {
+    body {
+        background: white;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    header,
+    footer,
+    .no-print {
+        display: none;
+    }
+
+    .print-grocery-container {
+        page-break-after: avoid;
+        border: none;
+        padding: 1rem 0;
+    }
+
+    .print-grocery-item {
+        page-break-inside: avoid;
+        margin-bottom: 0.5rem;
+    }
+
+    .print-grocery-header {
+        page-break-after: avoid;
+        border: none;
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ============================================
+   FOCUS STATES FOR ACCESSIBILITY
+   ============================================ */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #059669;
+    outline-offset: 2px;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+@media (max-width: 640px) {
+    .chart-container {
+        height: 250px;
+    }
+}
+
+/* ============================================
+   SMOOTH TRANSITIONS
+   ============================================ */
+* {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* ============================================
+   CHECKBOX STYLING
+   ============================================ */
+input[type="checkbox"] {
+    accent-color: #059669;
+}
+
+/* ============================================
+   TEXT SELECTION
+   ============================================ */
+::selection {
+    background-color: #fbbf24;
+    color: #78350f;
+}
+
+::-moz-selection {
+    background-color: #fbbf24;
+    color: #78350f;
+}
